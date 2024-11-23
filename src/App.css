@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure consistent sizing */
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 3%;
+  font-size: 2.5rem;
+  color: rgb(71, 202, 71);
+}
+
+.todo-wrapper {
+  background-color: rgb(87, 87, 87);
+  padding: 20px;
+  /* Limit the container width */
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+.todo-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border-bottom: 2px solid black;
+  padding-bottom: 20px;
+}
+
+.todo-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo-items label {
+  font-size: 1rem;
+  color: rgb(71, 202, 71);
+  margin-top: 6px;
+}
+
+.todo-items input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  /* width: 100%;  */
+}
+
+.btn-area {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.secondarybtn {
+  background-color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.classactive {
+  background-color: rgb(71, 202, 71);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.classactive:hover {
+  background-color: rgb(60, 180, 60);
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo-list-items {
+  background-color: rgb(122, 121, 121);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  word-wrap: break-word; /* Ensure text wraps within the box */
+  overflow-wrap: break-word;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.todo-list-items h2 {
+  color: rgb(60, 180, 60);
+
+  margin-bottom: 5px;
+  word-break: break-word; /* Ensure long text doesn't overflow */
+}
+
+.todo-list-items p {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.hover-icon,
+.hover-icon1 {
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.hover-icon {
+  color: red;
+}
+
+.hover-icon:hover {
+  color: rgb(228, 57, 57);
+  transform: scale(1.1);
+}
+
+.hover-icon1 {
+  color: rgb(3, 167, 3);
+}
+
+.hover-icon1:hover {
+  color: rgb(5, 199, 5);
+  transform: scale(1.1);
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .todo-wrapper {
+    padding: 15px;
+    width: 50vw;
+  }
+
+  .todo-list-items {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+  }
+
+  .btn-area {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .todo-input {
+    gap: 10px;
+  }
+}
